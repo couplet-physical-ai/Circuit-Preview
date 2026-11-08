@@ -1,0 +1,29 @@
+{
+  "name": "circuit-preview",
+  "version": "0.1.0",
+  "description": "Local, non-authoritative Circuit JSON preview and review-intent recorder",
+  "license": "Apache-2.0",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "circuit-preview": "./bin/circuit-preview.js"
+  },
+  "scripts": {
+    "start": "node ./bin/circuit-preview.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "overrides": {
+    "zod": "^4.1.12"
+  },
+  "dependencies": {
+    "@tscircuit/alphabet": "0.0.27",
+    "@tscircuit/circuit-json-util": "0.0.113",
+    "circuit-json": "0.0.491",
+    "circuit-json-to-connectivity-map": "0.0.30",
+    "circuit-to-svg": "0.0.423",
+    "schematic-symbols": "0.0.245"
+  }
+}
