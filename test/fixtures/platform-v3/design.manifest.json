@@ -1,0 +1,72 @@
+{
+  "approval": {
+    "state": "pending"
+  },
+  "approval_state": "pending",
+  "artifact_hashes": {
+    "kicad-drc": "df316fa6ac463f62a0858193ee760c78826e8dcc536cac6de7b14b0700c2ebeb"
+  },
+  "artifacts": [
+    {
+      "kind": "kicad-drc",
+      "path": "drc.json",
+      "sha256": "df316fa6ac463f62a0858193ee760c78826e8dcc536cac6de7b14b0700c2ebeb"
+    }
+  ],
+  "circuit_json": {
+    "hash": "e4f106f02cfd2daa15c1ecb19abaae25618250807abb2e2f6a845f580fb110eb",
+    "path": "circuit.json"
+  },
+  "circuit_json_hash": "e4f106f02cfd2daa15c1ecb19abaae25618250807abb2e2f6a845f580fb110eb",
+  "circuit_json_path": "circuit.json",
+  "configuration": {
+    "artifact_root": "artifacts"
+  },
+  "design_id": "blinky",
+  "diagnostic_status": {
+    "kicad": "failed",
+    "tscircuit": "carried-input"
+  },
+  "diagnostics": {
+    "kicad": {
+      "errors": 5,
+      "info": 0,
+      "warnings": 4
+    },
+    "tscircuit": {
+      "errors": 0,
+      "info": 0,
+      "warnings": 3
+    }
+  },
+  "manifest_hash": "0b16bf35d30c143acc3b77dfc27486d21d6d53b13a97e6bbb93177d7ca8cfb5d",
+  "manifest_version": 3,
+  "native_apply": {
+    "applied_revision": null,
+    "base_revision": null,
+    "plan_hash": null,
+    "plan_path": null,
+    "rejections": [],
+    "status": "unavailable-v1",
+    "undo_entries": 0
+  },
+  "native_artifact": {
+    "path": "board.kicad_pcb",
+    "revision": "r0-golden",
+    "sha256": "c4ed37e572b62404f012433b60e7f47304c4d1e9ac8de3e7ec3149b1ee7410a9"
+  },
+  "native_artifact_hash": "c4ed37e572b62404f012433b60e7f47304c4d1e9ac8de3e7ec3149b1ee7410a9",
+  "native_artifact_path": "board.kicad_pcb",
+  "native_revision": "r0-golden",
+  "source": {
+    "hash": "c3274ba69e4b2976c987e1dc34b72af6d609f4da3cfe75138f16bb572091ac65",
+    "path": "source.tsx"
+  },
+  "source_hash": "c3274ba69e4b2976c987e1dc34b72af6d609f4da3cfe75138f16bb572091ac65",
+  "source_path": "source.tsx",
+  "tool_versions": {
+    "circuit-json": "0.0.491",
+    "kicad-cli": "10.99.0",
+    "tscircuit": "0.0.2561"
+  }
+}
