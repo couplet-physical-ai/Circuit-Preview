@@ -1,0 +1,33 @@
+# Roadrunner CI (Woodpecker + Dagger, https://cicd.apps.example.com): port of .github/workflows/ci.yml — npm ci + npm test on Node 22 and Node 24 (both matrix legs, parallel steps).
+# `$$` escapes `$` for Woodpecker. Docs: https://cicd.docs.example.com/roadrunner/
+labels:
+  tier: "0"
+when:
+  - event: pull_request
+  - event: [push, manual]
+    branch: main
+steps:
+  - name: test-node22
+    image: bash
+    depends_on: []
+    environment:
+      OTEL_EXPORTER_OTLP_LOGS_ENDPOINT: http://192.0.2.1:4318/v1/logs
+      OTEL_EXPORTER_OTLP_LOGS_PROTOCOL: http/protobuf
+    commands:
+      - >-
+        ci-runner v0.10.1 npm --src=. --repo="$${CI_REPO_NAME,,}" --node=22 --scripts=test
+        --npm-registry=https://npm.dev.example.com/
+        --dep-cache=registry.dev.example.com/cache
+        --dep-cache-password=file:///etc/ci/cache-password --test-workers=2
+  - name: test-node24
+    image: bash
+    depends_on: []
+    environment:
+      OTEL_EXPORTER_OTLP_LOGS_ENDPOINT: http://192.0.2.1:4318/v1/logs
+      OTEL_EXPORTER_OTLP_LOGS_PROTOCOL: http/protobuf
+    commands:
+      - >-
+        ci-runner v0.10.1 npm --src=. --repo="$${CI_REPO_NAME,,}" --node=24 --scripts=test
+        --npm-registry=https://npm.dev.example.com/
+        --dep-cache=registry.dev.example.com/cache
+        --dep-cache-password=file:///etc/ci/cache-password --test-workers=2
