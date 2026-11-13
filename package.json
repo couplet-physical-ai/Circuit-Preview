@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@tscircuit/alphabet": "0.0.27",
-    "@tscircuit/circuit-json-util": "0.0.113",
+    "@tscircuit/circuit-json-util": "0.0.131",
     "circuit-json": "0.0.491",
     "circuit-json-to-connectivity-map": "0.0.30",
     "circuit-to-svg": "0.0.423",
