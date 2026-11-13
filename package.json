@@ -22,7 +22,7 @@
     "@tscircuit/alphabet": "0.0.27",
     "@tscircuit/circuit-json-util": "0.0.113",
     "circuit-json": "0.0.491",
-    "circuit-json-to-connectivity-map": "0.0.30",
+    "circuit-json-to-connectivity-map": "0.0.36",
     "circuit-to-svg": "0.0.423",
     "schematic-symbols": "0.0.245"
   }
